@@ -1,0 +1,24 @@
+agsemisc CHANGES to previous versions, PLANNED changes for future versions
+
+------------------------------------------------------------------------
+CHANGES to previous versions:
+
+1.2-1, released 2010-10-29
+- Renamed a.showextremes to a.printextremes
+- Removed a.rankval (use rank(x, na.last="keep") instead)
+- Added documentation for statshelpers.R: 
+  a.iqr, a.qr, a.findcorrelations, a.printextremes
+
+
+1.1-3, released 2006-05-19
+- FIRST PUBLIC VERSION (but package exists since ~1998)
+
+------------------------------------------------------------------------
+PLANNED CHANGES for future versions:
+
+Defects:
+- 
+
+Other change requests:
+- 
+------------------------------------------------------------------------
