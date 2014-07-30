@@ -56,5 +56,6 @@ printn <- function(x, digits) {
 
 tracebck = function() {
   # Only one line per call, as this suppresses large arguments.
-  sapply(.Traceback, function(x) x[[1]])
+  tb = get(".Traceback", envir = baseenv())
+  sapply(tb, function(x) x[[1]])
 }

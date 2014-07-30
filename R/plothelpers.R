@@ -49,19 +49,24 @@ plotf <- function(theplot, file="plot%03d", type=c("active"),
     do.plot(theplot)
   }
   if ("png" %in% type) {  # PNG
-    png(file = paste(file, ".png", sep=""),
+    png(filename = paste(file, ".png", sep=""),
         width=wi*dpi, height=hi*dpi, pointsize=ppoints, res=dpi, ...)
     do.plot(theplot)
   }
   if (("jpeg" %in% type) | ("jpg" %in% type)) {  # JPEG
-    jpeg(file = paste(file, ".jpg", sep=""),
+    jpeg(filename = paste(file, ".jpg", sep=""),
          width=wi*dpi, height=hi*dpi, pointsize=ppoints, res=dpi, ...)
     do.plot(theplot)
   }
   if ("wmf" %in% type) {  # Windows Metafile
-    win.metafile(file = paste(file, ".wmf", sep=""),
-                 width=wi, height=hi, pointsize=points, ...)
-    do.plot(theplot)
+    if (exists("win.metafile")) {
+      do.call("win.metafile", list(filename = paste(file, ".wmf", sep=""),
+                                   width=wi, height=hi, pointsize=points, ...))
+      do.plot(theplot)
+    }
+    else {
+      warning("plotf: ignoring type 'wmf' (not supported on this machine)")
+    }
   }
   invisible()  # return nothing
 }

@@ -130,7 +130,7 @@ panel.xy <- function(x, y, type = "p,r,r.pred,r=,N=,grid",
   #--- type == v:
   if ("v" %in% type) {
     cat(paste(c("median x=", " y=", " mean x=", " y=",
-                " sdev x=", " y=", " cor(x,y)=", ),
+                " sdev x=", " y=", " cor(x,y)="),
               signif(c(median(x), median(y), mean(x), mean(y), 
                        sqrt(var(x)), sqrt(var(y)), corr), 3), sep=""), 
         "\n", sep="")

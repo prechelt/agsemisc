@@ -1,11 +1,13 @@
 Package: agsemisc
-Version: 1.2-1
-Date: 2010-10-29
+Version: 1.2-2
+Date: 2014-07-30
 Title: Miscellaneous plotting and utility functions
-Author: Lutz Prechelt <prechelt@inf.fu-berlin.de>
+Authors@R: c(person("Lutz", "Prechelt", role = c("aut","cre"),
+		     email = "prechelt@inf.fu-berlin.de"))
 Maintainer: Lutz Prechelt <prechelt@inf.fu-berlin.de>
-Depends: R (>= 1.8.0), lattice, grid
-Suggests: MASS
+Depends: R (>= 1.8.0), lattice
+Imports: grid, MASS
 Description: High-featured panel functions for bwplot and xyplot,
-  various plot management helpers, some other utility functions
-License: GPL version 2
+  some plot management helpers, various convenience functions
+License: GPL-2
+URL: https://github.com/prechelt/agsemisc
