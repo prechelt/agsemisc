@@ -1,7 +1,7 @@
 Package: agsemisc
 Version: 1.2-2
 Date: 2014-07-30
-Title: Miscellaneous plotting and utility functions
+Title: Miscellaneous Plotting and Utility Functions
 Authors@R: c(person("Lutz", "Prechelt", role = c("aut","cre"),
 		     email = "prechelt@inf.fu-berlin.de"))
 Maintainer: Lutz Prechelt <prechelt@inf.fu-berlin.de>
